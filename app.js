@@ -12,7 +12,8 @@ var users = require('./routes/users');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var app = express();
-
+var flash = require('connect-flash');
+app.set('port', process.env.PORT || 3000);
 
 app.use(session({
     secret: settings.cookieSecret,
@@ -28,6 +29,8 @@ app.use(session({
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(flash());
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -67,6 +70,10 @@ app.use(function (err, req, res, next) {
         message: err.message,
         error: {}
     });
+});
+
+app.listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + app.get('port'));
 });
 
 
