@@ -52,7 +52,7 @@ User.prototype.save = function (callback) {
     });
 };
 
-//读取用户信息
+//读取用户信息1
 User.get = function (name, callback) {
     //打开数据库
     mongodb.open(function (err, db) {
