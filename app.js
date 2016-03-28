@@ -1,7 +1,7 @@
-var express = require('express');
+var express = require('express');           //node web应用框架
 var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
+var favicon = require('serve-favicon');     //node图标提供中间件
+var logger = require('morgan');             //http请求记录中间件
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
@@ -26,7 +26,7 @@ app.use(session({
     })
 }));
 
-// view engine setup
+// 模版引擎设置
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
