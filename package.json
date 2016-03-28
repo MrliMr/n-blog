@@ -13,9 +13,23 @@
     "express": "~4.13.1",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "mongodb":"2.0.42",
-    "express-session":"~1.13.0",
-    "connect-mongo":"0.8.2",
-    "connect-flash":"~0.1.1"
-  }
+    "mongodb": "2.0.42",
+    "express-session": "~1.13.0",
+    "connect-mongo": "0.8.2",
+    "connect-flash": "~0.1.1"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrliMr/n-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrliMr/n-blog/issues"
+  },
+  "homepage": "https://github.com/MrliMr/n-blog#readme",
+  "description": ""
 }

@@ -1,4 +1,4 @@
-var express = require('express');           //node web应用框架
+var express = require('express');           //node web应用框架1
 var path = require('path');
 var favicon = require('serve-favicon');     //node图标提供中间件
 var logger = require('morgan');             //http请求记录中间件
