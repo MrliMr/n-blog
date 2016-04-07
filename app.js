@@ -13,6 +13,15 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var app = express();
 var flash = require('connect-flash');
+
+var multer = require('multer');
+
+app.use(multer({
+    dest: './public/images',
+    rename: function (fieldname, filename) {
+        return filename;
+    }
+}));
 app.set('port', process.env.PORT || 3000);
 
 app.use(session({
